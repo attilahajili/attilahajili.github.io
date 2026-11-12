@@ -83,35 +83,6 @@
   z-index: 1;
 }
 
-.typing-wrap {
-  min-height: 2.2rem;
-  margin-bottom: 0.9rem;
-}
-
-.typing-text {
-  display: inline-block;
-  min-height: 1.5em;
-  font-size: clamp(1.1rem, 1.8vw, 1.45rem);
-  font-weight: 700;
-  color: var(--muted);
-  letter-spacing: -0.02em;
-}
-
-.typing-text::after {
-  content: "";
-  display: inline-block;
-  width: 2px;
-  height: 1.1em;
-  background: var(--heading);
-  margin-left: 0.3rem;
-  vertical-align: -0.15em;
-  animation: blink 1s step-end infinite;
-}
-
-@keyframes blink {
-  50% { opacity: 0; }
-}
-
 .hero-pattern {
   position: absolute;
   inset: 0;
@@ -180,7 +151,6 @@
   .hero-copy > *,
   .hero-copy .hero-cta-row > *,
   .reveal,
-  .typing-text::after,
   .tag,
   .project-card,
   .card-sheen,

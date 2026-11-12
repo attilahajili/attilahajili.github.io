@@ -18,6 +18,11 @@
   z-index: 1;
 }
 
+.hero-copy h1 {
+  max-width: 100%;
+  font-size: clamp(2.25rem, 4vw, 3.2rem);
+}
+
 .eyebrow {
   margin-bottom: 0.9rem;
   font-size: 0.74rem;
