@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore Atilla Hajili's studies, certificates, and project work in an interactive platform game." />
+    <meta name="theme-color" content="#0f172a" />
+    <title>Interactive Resume | Atilla Hajili</title>
+    <link rel="stylesheet" href="game/game.css" />
+    <script src="game/game.js" defer></script>
+  </head>
+  <body>
+    <header class="game-header">
+      <a class="game-brand" href="index.html">Atilla Hajili</a>
+      <nav aria-label="Main site links">
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a class="return-link" href="index.html">Back to website</a>
+      </nav>
+    </header>
+
+    <main class="game-main">
+      <section class="game-intro" aria-labelledby="game-title">
+        <p class="game-kicker">INTERACTIVE RESUME</p>
+        <h1 id="game-title">My University Journey</h1>
+        <p>Explore six parts of my university life. Move with <kbd>A</kbd>/<kbd>D</kbd> or the arrow keys, jump with <kbd>W</kbd>, <kbd>↑</kbd>, or <kbd>Space</kbd>, and interact with <kbd>E</kbd>.</p>
+      </section>
+
+      <section class="game-panel" aria-label="Interactive resume game">
+        <div class="game-toolbar">
+          <p class="game-instructions" id="game-instructions">
+            Find each checkpoint and press <kbd>E</kbd> to complete its mission. On a phone, use the on-screen controls.
+          </p>
+          <button class="restart-button" type="button" id="restart-game">Restart</button>
+        </div>
+
+        <canvas
+          id="resume-game"
+          class="game-canvas"
+          width="960"
+          height="440"
+          aria-label="University journey platform game. Use arrow keys or A and D to move, Space or Up to jump, and E to interact."
+          aria-describedby="game-instructions game-status"
+          tabindex="0"
+        ></canvas>
+
+        <ol class="mission-progress" id="mission-progress" aria-label="Mission progress">
+          <li data-mission="0"><span>1</span> ADA Journey</li>
+          <li data-mission="1"><span>2</span> Projects</li>
+          <li data-mission="2"><span>3</span> Sports Club</li>
+          <li data-mission="3"><span>4</span> MUN</li>
+          <li data-mission="4"><span>5</span> Technology</li>
+          <li data-mission="5"><span>6</span> My Future</li>
+        </ol>
+
+        <div class="touch-controls" aria-label="Touch controls">
+          <button type="button" data-control="left" aria-label="Move left">←</button>
+          <button type="button" data-control="right" aria-label="Move right">→</button>
+          <button type="button" data-control="jump" aria-label="Jump">Jump</button>
+          <button type="button" id="interact-button" hidden>Interact</button>
+        </div>
+
+        <div class="game-status" id="game-status" role="status" aria-live="polite">
+          Welcome! Explore the campus and approach a mission checkpoint.
+        </div>
+
+        <div class="milestone-panel" id="milestone-panel" aria-live="polite">
+          <p class="game-kicker">CURRENT MISSION</p>
+          <h2 id="milestone-title">Mission 1: My ADA University Journey</h2>
+          <p id="milestone-description">Enter the campus and begin exploring student life. Approach a checkpoint and press E to interact.</p>
+          <a class="project-portal-link" id="project-portal-link" href="projects.html" hidden>
+            EXPLORE MY PROJECTS <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
+
+      <p class="game-back-link"><a href="about.html">← Return to my About page</a></p>
+    </main>
+  </body>
+</html>
